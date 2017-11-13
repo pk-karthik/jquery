@@ -2,8 +2,8 @@ define( [
 	"./core",
 	"./var/concat",
 	"./var/push",
-	"./var/rcheckableType",
 	"./core/access",
+	"./manipulation/var/rcheckableType",
 	"./manipulation/var/rtagName",
 	"./manipulation/var/rscriptType",
 	"./manipulation/wrapMap",
@@ -22,8 +22,8 @@ define( [
 	"./traversing",
 	"./selector",
 	"./event"
-], function( jQuery, concat, push, rcheckableType,
-	access, rtagName, rscriptType,
+], function( jQuery, concat, push, access,
+	rcheckableType, rtagName, rscriptType,
 	wrapMap, getAll, setGlobalEval, buildFragment, support,
 	dataPriv, dataUser, acceptData, DOMEval, nodeName ) {
 
@@ -38,7 +38,7 @@ var
 
 	/* eslint-enable */
 
-	// Support: IE <=10 - 11, Edge 12 - 13
+	// Support: IE <=10 - 11, Edge 12 - 13 only
 	// In IE/Edge using regex groups here causes severe slowdowns.
 	// See https://connect.microsoft.com/IE/feedback/details/1736512/
 	rnoInnerhtml = /<script|<style|<link/i,
